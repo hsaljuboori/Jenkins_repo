@@ -15,7 +15,7 @@ def load_vars(task):
     push_config(task)
 
 def push_config(task):
-    template = task.run(task=template_file, template="configs.j2", path="templates")
+    template = task.run(task=template_file, template="ospf.j2", path="templates")
     task.host["routing_config"] = template.result
     rendered = task.host["routing_config"]
     configuration = rendered.splitlines()
