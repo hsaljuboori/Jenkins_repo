@@ -1,2 +1,2 @@
-router ospf {{ host['ospf']['ospf_process'] }}
-router-id {{ host['ospf']['ospf_rid'] }}
+router ospf {{ host.facts.OSPF.RID }}
+router-id {{ host.facts.OSPF.NETWORK }}
