@@ -1,3 +1,4 @@
+from jinja2.environment import Template
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_configs
 from nornir_jinja2.plugins.tasks import template_file
