@@ -24,6 +24,7 @@ def push_config(task):
 
 results = nr.run(task=load_vars)
 print_result(results)
+print(results)
 failuers = nr.data.failed_hosts
 if failuers:
     raise NornirExecutionError ("Nornir Failure Detected")
