@@ -23,4 +23,4 @@ for host in nr.inventory.hosts.values():
   state= state_result[f"{host}"][0].result
   assert "Full" in state, "Failid"
   print("PASSED")
-#ipdb.set_trace()
+ipdb.set_trace()
