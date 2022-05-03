@@ -3,8 +3,5 @@ OSPF:
     RID: "22""
     NETWORK: "0.0.0.0 255.255.255.255 area 0"
     ROUTER_ID: "1.1.1.1"
-<<<<<<< HEAD
+
     
-=======
-    address-family: "ipv4 multicast"
->>>>>>> 9840cdee8e655582052ede977e01ec045ab51b08
