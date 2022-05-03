@@ -1,0 +1,48 @@
+R10:
+      hostname: "192.168.86.25"
+      groups:
+          - cisco_group
+      data:
+          role: "Spine"
+          location: "ILG1"
+          layer: "OOB"
+          contact: "NetOps@vrsn.com"
+          ANS: "65003"
+          snmp:
+            snmp_community: "vrsn-rw"
+          ospf:
+             ospf_rid: "10.10.10.10"
+             ospf_process: "1"
+             ospf_networks:
+                 ip: "192.168.10.0"
+                 wildcard: "0.0.0.255"
+                 area: "0"
+          country: usa
+          region: north
+          state: NewYork
+          cost: east
+
+
+R11:
+     hostname: "192.168.86.26"
+     groups:
+         - cisco_group
+     data:
+          role: "Leaf"
+          location: "ILG1"
+          layer: "OOB"
+          contact: "NetOps@vrsn.com"
+          ANS: "65004"
+          snmp:
+            snmp_community: "vrsn-rw"
+          ospf:
+             ospf_rid: "11.11.11.11"
+             ospf_process: "1"
+             ospf_networks:
+                 ip: "192.168.11.0"
+                 wildcard: "0.0.0.255"
+                 area: "0"
+          country: usa
+          region: south
+          state: Washington
+          cost: west

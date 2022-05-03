@@ -1,4 +1,3 @@
-from jinja2.environment import Template
 import os
 import sys
 from nornir import InitNornir

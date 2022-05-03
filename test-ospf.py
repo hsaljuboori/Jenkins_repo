@@ -3,12 +3,13 @@ Author: ALjuboori
 """
 import os
 import sys
+import ipdb
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 from nornir_utils.plugins.functions import print_result
-import ipdb
 
-config_file = sys.agrv[1]
+
+config_file = sys.argv[1]
 nr = InitNornir(config_file="config.yaml")
 nr.inventory.defaults.username= os.getenv("USERNAME")
 nr.inventory.defaults.password = os.getenv("PASSWORD")
@@ -28,4 +29,5 @@ for host in nr.inventory.hosts.values():
   state= state_result[f"{host}"][0].result
   assert "Full" in state, "Failid"
   print("PASSED")
+  
 ipdb.set_trace()
