@@ -9,12 +9,8 @@ from nornir.core.exceptions import NornirExecutionError
 
 config_file = sys.argv[1]
 nr = InitNornir(config_file=config_file)
-
 nr.inventory.defaults.username= os.getenv("USERNAME")
 nr.inventory.defaults.password= os.getenv("PASSWORD")
-
-
-
 
 def load_vars(task):
     loader = task.run(task=load_yaml, file="group_vars/all.yaml")
@@ -28,11 +24,8 @@ def push_config(task):
     configuration = rendered.splitlines()
     task.run(task=send_configs, configs=configuration)
  
-
 results = nr.run(task=load_vars)
 print_result(results)
 failuers = nr.data.failed_hosts
 if failuers:
     raise NornirExecutionError ("Nornir Failure Detected")
-
-
