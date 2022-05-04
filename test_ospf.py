@@ -23,6 +23,6 @@ def pull_info(task):
 
 state_result= nr.run(task=pull_info)
 for host in nr.inventory.hosts.values():
-  state= state_result[f"{host}"][0].result
-  assert "Full" in state, "Failid"
-  print("PASSED")
+    state= state_result[f"{host}"][0].result
+    assert "Full" or "2WAY" in state, "Failid"
+    print("PASSED")
