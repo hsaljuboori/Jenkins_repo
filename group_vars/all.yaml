@@ -3,6 +3,6 @@ OSPF:
     RID: "22"
     NETWORK: "0.0.0.0 255.255.255.255 area 0"
     ROUTER_ID: "1.1.1.1"
-    Self_ID:"1.1.1.1"
+    Self_ID: "1.1.1.1"
 
     
